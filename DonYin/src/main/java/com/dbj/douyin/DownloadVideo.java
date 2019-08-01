@@ -169,7 +169,7 @@ class VideoTask implements Runnable {
     public void run() {
 
         if (DownloadVideo.jedis.get("dbj" + aweme_id) != null) {
-System.out.println("视频已存在");
+            System.out.println("视频已存在");
         } else {
             try {
                 //解析分享的url

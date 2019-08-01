@@ -91,7 +91,7 @@ class Task implements Runnable {
             String aweme_id = ((JSONObject) json).getJSONArray("comments").getJSONObject(0).getString("aweme_id");
 
             System.out.println(aweme_id);
-            DownloadComments.jedis.lpush(aweme_id,jsonStr);
+            DownloadComments.jedis.lpush(aweme_id, jsonStr);
 //
         } catch (Exception e) {
             e.printStackTrace();
