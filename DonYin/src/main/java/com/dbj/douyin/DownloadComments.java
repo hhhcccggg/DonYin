@@ -82,6 +82,7 @@ class Task implements Runnable {
             URL url = new URL(comments);
 
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("POST");
             conn.setRequestProperty("user-agent", "com.ss.android.ugc.aweme/340 (Linux; U; Android 8.0.0; zh_CN; MI 6; Build/OPR1.170623.027; Cronet/58.0.2991.0)");
 
             InputStream inputStream = conn.getInputStream();
